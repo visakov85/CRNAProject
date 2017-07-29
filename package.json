@@ -17,7 +17,7 @@
   },
   "jest": {
     "preset": "jest-expo",
-    "preprocessorIgnorePatterns": [
+    "transformIgnorePatterns": [
       "/node_modules/"
     ],
     "moduleDirectories": [
