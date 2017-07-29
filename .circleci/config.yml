@@ -3,9 +3,6 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
-machine:
-    pre:
-      - echo fs.inotify.max_user_watches=582222 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 jobs:
   build:
     docker:
@@ -20,6 +17,8 @@ jobs:
     working_directory: ~/CRNAProject
 
     steps:
+      - run: echo fs.inotify.max_user_watches=582222 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
       - checkout
 
       # Download and cache dependencies
