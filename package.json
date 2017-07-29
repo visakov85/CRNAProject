@@ -16,7 +16,14 @@
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "preprocessorIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "testRegex": "**.*.test.js"
   },
   "dependencies": {
     "expo": "^19.0.0",
